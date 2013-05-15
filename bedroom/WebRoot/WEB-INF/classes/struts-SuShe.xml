@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"struts-2.1.7.dtd">
+
+
+<struts>
+		<package name="SuShe" extends="struts-default" >	
+		<action name="*addRoomAction_*" method="{1}" class="addRoomAction">
+			<result name="success">/pages/SuShe/{2}.jsp</result>
+			<result name="input"></result>
+		</action>
+		
+		<action name="*studentsToRoomAction_*" method="{1}" class="studentsToRoomAction">
+			<result name="success">/pages/SuShe/{2}.jsp</result>
+			<result name="input"></result>
+		</action>
+		
+		<action name="*createRoomAction_*" method="{1}" class="createRoomAction">
+			<result name="success">/pages/SuShe/{2}.jsp</result>
+			<result name="input"></result>
+		</action>
+		
+		<action name="*createDongAction_*" method="{1}" class="createDongAction">
+			<result name="success">/pages/SuShe/{2}.jsp</result>
+			<result name="input"></result>
+		</action>
+	</package>
+   
+</struts>	

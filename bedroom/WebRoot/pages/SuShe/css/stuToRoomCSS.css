@@ -1,0 +1,74 @@
+@CHARSET "UTF-8";
+#nansheng{
+	position: absolute;
+	left:195px;
+	top:10px;
+}
+#nvsheng{
+	position: absolute;
+	left:195px;
+	top:590px;
+}
+#fangshi1{
+	width: 1300px;
+	height: auto;
+	border:1px black solid;
+	position: absolute;
+	top:40px;
+	left:25px;
+}
+#strcmc{
+	width: 140px;
+	height: auto;
+	border: 1px red solid;
+	float:left;
+	position: absolute;
+}
+#strnn{
+	width:300px;
+	height: 500px;
+	border: 1px red solid;
+	float:left;
+	position: absolute;
+	left: 170px;
+}
+#strnv{
+	width:300px;
+	height: 500px;
+	border: 1px red solid;
+	position: absolute;
+	top:600px;
+}
+#strnantab{
+	width: 280px;
+	border: 1px red solid;
+}
+#strnantab2{
+	width: 280px;
+	border: 1px red solid;
+}
+#strstr{
+	position:absolute;
+	width:800px;
+	height:500px;
+	left:500px;
+	border:1px red solid;
+}
+#strstrtab{
+	width:780px;
+	border:1px black solid;
+}
+
+#strstr2{
+	position:absolute;
+	width:800px;
+	height:500px;
+	left:500px;
+	top:600px;
+	border:1px red solid;
+}
+
+#strstr2tab{
+	width:780px;
+	border:1px black solid;
+}

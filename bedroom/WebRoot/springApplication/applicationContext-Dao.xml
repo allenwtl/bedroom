@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.0.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+	  http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+
+		<bean id="collegeDaoImp" class="com.daoImp.CollegeDaoImp">		</bean>
+		<bean id="majorDaoIMp" class="com.daoImp.MajorDaoImp">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		<bean id="classDaoIMp" class="com.daoImp.ClassDaoImp">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		<bean id="roomandbanjiDaoImp" class="com.daoImp.RoomandBanjiDaoImp"></bean>
+		<bean id="roomDaoImp" class="com.daoImp.RoomDaoImp">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		<bean id="roomlistDaoImp" class="com.daoImp.RoomListDaoImp"></bean>
+		<bean id="remarkDaoImp" class="com.daoImp.RemarkDaoImp"></bean>
+		<bean id="homenumberDaoImp" class="com.daoImp.HomenumberDaoImp">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		<bean id="leavetypeDaoImp" class="com.daoImp.LeavetypeDaoImp">
+				<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		<bean id="leave1DaoImp" class="com.daoImp.Leave1DaoImp">
+				<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		<bean id="leave2DaoImp" class="com.daoImp.Leave2DaoImp"></bean>
+		<bean id="leave3DaoImp" class="com.daoImp.Leave3DaoImp"></bean>
+		<bean id="xiaojiaDaoImp" class="com.daoImp.XiaojiaDaoImp"></bean>
+		<bean id="teacherDaoImp" class="com.daoImp.TeacherDaoImp">
+				<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		<bean id="jobDaoImp" class="com.daoImp.JobDaoImp"></bean>
+		<bean id="userDaoImp" class="com.daoImp.UserDaoImp">
+			<property name="sessionFactory"  ref="sessionFactory"></property>
+		</bean>
+		<bean id="studentsjobDaoImp" class="com.daoImp.StudentsJobDaoImp"></bean>
+		<bean id="resumeDaoImp" class="com.daoImp.ResumeDaoImp">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		<bean id="graduateDaoImp" class="com.daoImp.GraduateDaoImp"></bean>
+		<bean id="phonelistDaoImp" class="com.daoImp.PhoneListDaoImp"></bean>
+		<bean id="studentsDaoImp" class="com.daoImp.StudentsDaoImp">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		<bean id="qinshiDaoImp" class="com.daoImp.QinshiDaoImp">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		<bean  id="addressInfoDaoImp" class="com.daoImp.AddressInfoDaoImp">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		<bean id="kezhiDaoImp" class="com.daoImp.KezhiDaoImp">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		
+		<bean id="nationDaoImp" class="com.daoImp.NationDaoImp">
+			<property name="sessionFactory"  ref="sessionFactory"></property>
+		</bean>
+		
+		<bean id="politicalDaoImp" class="com.daoImp.PoliticalDaoImp">
+			<property name="sessionFactory"  ref="sessionFactory"></property>
+		</bean>
+		
+</beans>

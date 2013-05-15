@@ -1,0 +1,91 @@
+@CHARSET "UTF-8";
+
+div{
+	border:1px red solid;
+
+}
+input{
+	border-top-style: none; 
+	border-left-style:none; 
+	border-bottom-style:inset;
+	border-bottom-color: black;
+}
+
+table{
+	border: 1px black solid;
+}
+th,td{
+	border: 1px gray solid;
+	height: 25px;
+}
+.baoGao{
+	position:absolute;
+	left:100px;
+}
+.baoGaoTab{
+	width:700px;
+	height: auto;
+	
+}
+
+.gaiZhang{
+	position: absolute;
+	left:500px;
+}
+
+.qianShu{
+	position:absolute;
+	
+}
+
+.paraBiao{
+	position:absolute;
+	width: 350px;
+	heigth:200px;
+	top:190px;
+	left:900px;
+}
+.paraBiaoTab{
+	width:350px;
+	
+}
+.anNiuCJ{
+	position:absolute;
+	top:380px;
+	left:900px;
+	width:80px;
+}
+
+.anNiuGJ{
+	position:absolute;
+	top:400px;
+	left:900px;
+	width:80px;
+}
+
+.dongShu{
+	width:80px;
+	height:15px;
+}
+
+.baoGaohang2{
+	position:relative;
+	width:260px;
+	left:50px;
+}
+.baoGaoHang{
+	position:relative;
+	left:50px;
+}
+.addCeng{
+	position:relative;
+	top:20px;
+}
+#deleteCeng{
+	position:relative;
+	top:20px;
+}
+.hangTabClass{
+	position:relative;
+	right:50px;
+}

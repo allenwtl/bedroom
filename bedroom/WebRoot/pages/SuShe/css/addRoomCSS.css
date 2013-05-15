@@ -1,0 +1,58 @@
+@CHARSET "UTF-8";
+
+#adTop{
+	position:absolute;
+	left:600px;
+	border:1px red solid;
+}
+#arf{
+	width:900px;
+	height: 1000px;
+	border: black 1px solid;
+
+	position: absolute;
+	left:240px;
+	top: 100px;
+}
+#arfcmc{
+	width: 850px;
+	height:170px;
+	border: 1px black solid;
+	float:left;
+	position: absolute;
+}
+
+#arFormDong{
+	position:absolute;
+	border:1px red solid;
+	top:50px;
+	
+}
+
+
+#arfs{
+	position: absolute;
+	left:90px;
+	top:130px;
+	border:1px black solid;
+}
+
+
+#adShowEmptyRooms{
+	width:700px;
+	height:500px;
+	position:absolute;
+	border:1px red solid;
+	top:200px;
+	left:100px;
+}
+
+
+
+#adShowNumber{
+	border:1px red solid;
+	position: fixed;
+	top :200px;
+	left:1200px;
+	height:100px;
+}

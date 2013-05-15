@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.0.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+	  http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+
+
+		<bean id="collegeServiceImp" class="com.serviceImp.CollegeServiceImp">
+			<property name="collegeDaoImp" ref="collegeDaoImp"></property>
+		</bean>
+		<bean id="majorServiceImp" class="com.serviceImp.MajorServiceImp">
+			<property name="majorDaoImp" ref="majorDaoIMp"></property>
+		</bean>
+		<bean id="classServiceImp" class="com.serviceImp.ClassServiceImp">
+			<property name="classDaoImp" ref="classDaoIMp"></property>
+		</bean>
+			<bean id="roomlistServiceImp" class="com.serviceImp.RoomListServiceImp">
+			<property name="roomListDaoImp" ref="roomlistDaoImp"></property>
+		</bean>
+		<bean id="roomServiceImp" class="com.serviceImp.RoomServiceImp">
+			<property name="roomDaoImp" ref="roomDaoImp"></property>
+		</bean>
+		<bean id="remarkServiceImp" class="com.serviceImp.RemarkServiceImp">
+			<property name="remarkDaoImp" ref="remarkDaoImp"></property>
+		</bean>
+		<bean id="homenumberServiceImp" class="com.serviceImp.HomenumberServiceImp">
+			<property name="homenumberDaoImp" ref="homenumberDaoImp"></property>
+		</bean>
+		<bean id="leavetypeServiceImp" class="com.serviceImp.LeavetypeServiceImp">
+			<property name="leavetypeDaoImp" ref="leavetypeDaoImp"></property>
+		</bean>
+		<bean id="leave1ServiceImp" class="com.serviceImp.Leave1ServiceImp">
+			<property name="leave1DaoImp" ref="leave1DaoImp"></property>
+			<property name="teacherDaoImp" ref="teacherDaoImp"></property>
+			<property name="leavetypeDaoImp" ref="leavetypeDaoImp"></property>
+			<property name="studentsDaoImp" ref="studentsDaoImp"></property>
+		</bean>
+		<bean id="leave2ServiceImp" class="com.serviceImp.Leave2ServiceInterf">
+			<property name="leave2DaoImp" ref="leave2DaoImp"></property>
+		</bean>
+		<bean id="leave3ServiceImp" class="com.serviceImp.Leave3ServiceImp">
+			<property name="leave3DaoImp" ref="leave3DaoImp"></property>
+		</bean>
+		<bean id="xiaojiaServiceImp" class="com.serviceImp.XiaojiaServiceImp">
+			<property name="xiaojiaDaoImp" ref="xiaojiaDaoImp"></property>
+		</bean>
+		<bean id="teacherServiceImp" class="com.serviceImp.TeacherServiceImp">
+			<property name="teacherDaoImp" ref="teacherDaoImp"></property>
+		</bean>
+		<bean id="userServiceImp" class="com.serviceImp.UserServiceImp">
+			<property name="userDaoImp" ref="userDaoImp"></property>
+		</bean>
+		<bean id="jobServiceImp" class="com.serviceImp.JobServiceImp">
+			<property name="jobDaoImp" ref="jobDaoImp"></property>
+		</bean>
+		<bean id="studentsjobServiceImp" class="com.serviceImp.StudentsJobServiceImp">
+			<property name="studetnsjobDaoImp" ref="studentsjobDaoImp"></property>
+		</bean>
+		<bean id="resumeServiceImp" class="com.serviceImp.ResumeServiceImp">
+			<property name="resumeDaoImp" ref="resumeDaoImp"></property>
+		</bean>
+		<bean id="graduateServiceImp" class="com.serviceImp.GraduateServiceImp">
+			<property name="graduateDaoImp" ref="graduateDaoImp"></property>
+		</bean>
+		<bean id="phonelistServiceImp" class="com.serviceImp.PhoneListServiceImp">
+			<property name="phonelistDaoImp" ref="phonelistDaoImp"></property>
+		</bean>
+		<bean id="studentsServiceImp" class="com.serviceImp.StudentsServiceImp">
+		<property name="studentsDaoImp" ref="studentsDaoImp"></property>
+		</bean>
+		<bean id="qinshiServiceImp" class="com.serviceImp.QinshiServiceImp">
+			<property name="qinshiDaoImp" ref="qinshiDaoImp"></property>
+		</bean>
+		<bean id="addressInfoServiceImp" class="com.serviceImp.AddressInfoServiceImp">
+			<property name="addressInfoDaoImp" ref="addressInfoDaoImp"></property>
+		</bean>
+	
+		<bean id="kezhiServiceImp"  class="com.serviceImp.KezhiServiceImp">
+			<property name="kezhiDaoImp" ref="kezhiDaoImp"></property>
+		</bean>
+		
+		<bean id="nationServiceImp" class="com.serviceImp.NationServiceImp">
+			<property name="nationDaoImp"  ref="nationDaoImp"></property>
+		</bean>
+		
+		<bean id="politicalServiceImp"  class="com.serviceImp.PoliticalServiceImp">
+			<property name="politicalDaoImp"  ref="politicalDaoImp"></property>
+		</bean>
+		
+</beans>

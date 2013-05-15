@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"struts-2.1.7.dtd">
+
+
+<struts>
+		<package name="Leave" extends="struts-default" >	
+		<action name="*LeAction" method="{1}" class="leaveAction">
+			<result name="success">/pages/Leave/successful.jsp</result>
+			<result name="input"></result>
+		</action>
+	</package>
+   
+</struts>	

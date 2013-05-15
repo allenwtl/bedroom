@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"struts-2.1.7.dtd">
+
+<struts>
+	<constant name="struts.custom.i18n.resources" value="message"></constant>
+	
+	<package name="students" extends="struts-default">
+		<action name="student"  class="studentsAction"></action>
+		<action name="AdressAction" class="addressAction">
+			<result  name="success"></result>
+		</action>
+		<action name="getStu" class="getStudentAction"></action>
+		<action name="addStudent" class="addStudentAction"></action>
+		<action name="excelAction" class="studentExcelAction"></action>
+		<action name="idCode" class="idCodeAction"></action>
+		<action name="imageUpload"  class="imageUploadAction">
+			<interceptor-ref name="fileUpload">
+				<param name="allowedTypes">image/jpeg,image/jpg</param>
+				<param name="maximumSize">61440</param>
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+			<result name="input">/pages/Students/pictureUpload.jsp</result>
+			<result name="success" type="redirect">/pages/Students/getStuInfo.jsp</result>
+		</action>
+		
+		<action name="college" class="collegeAction"></action>
+		<action name="major" class="majorAction"></action>
+		<action name="addMajor" class="addMajorAction"></action>
+		<action name="queryMajor" class="queryMajorAction"></action>
+		<action name="queryKezhi" class="queryKezhiAction"></action>
+		<action name="addClass" class="addClassAction"></action>
+		
+	</package>
+
+	
+</struts>	

@@ -1,0 +1,10 @@
+@CHARSET "UTF-8";
+#crdc{
+	border:1px red solid;
+	width:220px;
+	height: 60px;
+}
+#crshownewtab{
+	width:800px;
+	border:1px black solid;
+}

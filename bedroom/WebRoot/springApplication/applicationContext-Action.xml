@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.0.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+	  http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+
+		<bean id="addRoomAction" class="com.aciton.SuShe.AddRoomAction">
+		<property name="studentsServiceImp" ref="studentsServiceImp"></property>
+		<property name="collegeServiceImp" ref="collegeServiceImp"></property>
+		<property name="classServiceImp" ref="classServiceImp"></property>
+		<property name="majorServiceImp" ref="majorServiceImp"></property>
+		<property name="roomServiceImp" ref="roomServiceImp"></property>
+		<property name="qinshiServiceImp" ref="qinshiServiceImp"></property>
+		</bean>
+		
+		<bean id="studentsAction" class="com.action.student.StudentsAction">
+			<property name="nationServiceImp" ref="nationServiceImp"></property>
+			<property name="politicalServiceImp"  ref="politicalServiceImp"></property>
+			<property name="userServiceImp"  ref="userServiceImp"></property>
+			<property name="studentsServiceImp" ref="studentsServiceImp"></property>
+			<property name="classServiceImp" ref="classServiceImp"></property>
+		</bean>
+		
+		<bean id="leaveAction" class="com.aciton.LeaveAction">
+			<property name="leave1ServiceImp" ref="leave1ServiceImp"></property>
+		
+		</bean>
+		
+		<bean id="studentsToRoomAction" class="com.aciton.SuShe.studentsToRoomAction">
+			<property name="studentsServieImp" ref="studentsServiceImp"></property>
+			<property name="classServiceImp" ref="classServiceImp"></property>
+			<property name="collegeServiceImp" ref="collegeServiceImp"></property>
+			<property name="majorServiceImp" ref="majorServiceImp"></property>
+			<property name="roomServiceImp" ref="roomServiceImp"></property>
+		</bean>
+
+		<bean id="addressAction" class="com.action.student.AddressAction">
+			<property name="addressInfoServiceImp" ref="addressInfoServiceImp"></property>
+		</bean>
+
+		
+		<bean id="getStudentAction" class="com.action.student.GetStudentAction">
+			<property name="studentsServiceImp" ref="studentsServiceImp"></property>
+			<property name="classServiceImp"  ref="classServiceImp"></property>
+			<property name="kezhiServiceImp"  ref="kezhiServiceImp"></property>
+		</bean>
+		
+		<bean id="addStudentAction" class="com.action.student.AddStudentAction">
+			<property name="studentsServiceImp" ref="studentsServiceImp"></property>
+			<property name="addressInfoServiceImp" ref="addressInfoServiceImp"></property>
+			<property name="resumeServiceImp"  ref="resumeServiceImp"></property>
+			<property name="homenumberServiceImp" ref="homenumberServiceImp"></property>
+		</bean>
+
+		
+		<bean id="createDongAction" class="com.aciton.SuShe.CreateDongAction">
+			<property name="roomServiceImp" ref="roomServiceImp"></property>
+		</bean>
+
+		<bean id="studentExcelAction" class="com.action.student.StudentExcelAction">
+			<property name="classServiceImp"  ref="classServiceImp"></property>
+			<property name="studentsServiceImp" ref="studentsServiceImp"></property>
+			<property name="userServiceImp"  ref="userServiceImp"></property>
+		</bean>
+
+		<bean id="idCodeAction" class="com.action.student.IdCodeAction"></bean>
+		
+		<bean id="imageUploadAction" class="com.action.student.ImgUploadAction">
+			<property name="studentsServiceImp" ref="studentsServiceImp"></property>
+		</bean>
+		
+		<bean id="modifyStuInfo" class="com.action.student.ModifyStuInfo">
+			<property name="addressInfoServiceImp" ref="addressInfoServiceImp"></property>
+			<property name="classServiceImp" ref="classServiceImp"></property>
+			<property name="homenumberServiceImp" ref="homenumberServiceImp"></property>
+			<property name="nationServiceImp" ref="nationServiceImp"></property>
+			<property name="politicalServiceImp" ref="politicalServiceImp"></property>
+			<property name="resumeServiceImp" ref="resumeServiceImp"></property>
+			<property name="studentsServiceImp" ref="studentsServiceImp"></property>
+		</bean>
+		
+		<bean id="collegeAction" class="com.action.student.CollegeAction">
+			<property name="collegeServiceInterf" ref="collegeServiceImp"></property>
+		</bean>
+		
+		<bean id="majorAction" class="com.action.student.MajorAction">
+			<property name="kezhiServiceInterf" ref="kezhiServiceImp"></property>
+		</bean>
+		
+		<bean id="addMajorAction" class="com.action.student.AddMajorAction">
+			<property name="majorServiceInterf" ref="majorServiceImp"></property>
+		</bean>
+		
+		<bean id="queryMajorAction" class="com.action.student.QueryMajorAction">
+			<property name="majorServiceInterf" ref="majorServiceImp"></property>
+		</bean>
+		
+		<bean id="queryKezhiAction" class="com.action.student.QueryKezhiAction">
+			<property name="kezhiServiceInterf" ref="kezhiServiceImp"></property>
+		</bean>
+		
+		<bean id="addClassAction" class="com.action.student.AddClassAction">
+			<property name="classServiceInterf" ref="classServiceImp"></property>
+			<property name="kezhiServiceInterf" ref="kezhiServiceImp"></property>
+			<property name="majorServiceInterf" ref="majorServiceImp"></property>
+		</bean>
+</beans>
+
+

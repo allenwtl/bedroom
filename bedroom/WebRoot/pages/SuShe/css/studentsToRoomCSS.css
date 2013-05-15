@@ -1,0 +1,28 @@
+@CHARSET "UTF-8";
+
+
+.strTop{
+	border:1px red solid;
+	width:500px;
+}
+.strInforOfStudents{
+	border:1px red solid;
+	width:500px;
+	position:absolute;
+	top:130px;
+}
+
+.strInforOfRoom{
+	border:1px red solid;
+	width:750px;
+	position:absolute;
+	left:550px;
+	top:10px;
+}
+#tiJiaoAnNiu{
+	position:absolute;
+	left:500px;
+}
+.strTop{
+	background-color: D5D5D5;
+}
