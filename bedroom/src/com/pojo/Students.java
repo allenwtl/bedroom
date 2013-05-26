@@ -12,12 +12,11 @@ public class Students implements java.io.Serializable {
 	private String studentsNumber;
 	private Integer studentsId;
 	private Short roomId;
-
 	private Short classNumber;
 	private String studentsPinyin;
 	private Timestamp studentsInroomtime;
 	private String studentsName;
-	private Short studentsPolitics;
+	private String studentsPolitics;
 	private Timestamp studentsBirthday;
 	private Short studentsSex;
 	private String studentsIdcard;
@@ -92,11 +91,11 @@ public class Students implements java.io.Serializable {
 		this.studentsName = studentsName;
 	}
 
-	public Short getStudentsPolitics() {
+	public String getStudentsPolitics() {
 		return this.studentsPolitics;
 	}
 
-	public void setStudentsPolitics(Short studentsPolitics) {
+	public void setStudentsPolitics(String studentsPolitics) {
 		this.studentsPolitics = studentsPolitics;
 	}
 

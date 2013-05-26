@@ -16,5 +16,14 @@ public class PoliticalServiceImp implements PoliticalServiceInter {
 	public List<Political> getAllPoliticals() {
 		return   politicalDaoImp.getAllPoliticals();
 	}
+	
+	public Political getPoliticalByNumber(String number){
+		return   politicalDaoImp.getPoliticalByNumber(number);
+	}
+
+	
+	public Political getPoliticalByName(String name) {
+		return   politicalDaoImp.getPoliticalByName(name);
+	}
 
 }

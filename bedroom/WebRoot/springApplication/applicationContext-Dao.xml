@@ -48,7 +48,9 @@
 			<property name="sessionFactory" ref="sessionFactory"></property>
 		</bean>
 		<bean id="graduateDaoImp" class="com.daoImp.GraduateDaoImp"></bean>
-		<bean id="phonelistDaoImp" class="com.daoImp.PhoneListDaoImp"></bean>
+		<bean id="phonelistDaoImp" class="com.daoImp.PhoneListDaoImp">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
 		<bean id="studentsDaoImp" class="com.daoImp.StudentsDaoImp">
 			<property name="sessionFactory" ref="sessionFactory"></property>
 		</bean>

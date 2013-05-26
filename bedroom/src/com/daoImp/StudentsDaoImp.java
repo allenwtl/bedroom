@@ -97,7 +97,7 @@ private static final Log log = LogFactory.getLog(StudentsDaoImp.class);
 
 	public void updateStudent(Students students) {
 		try {
-			this.getHibernateTemplate().save(students);
+			this.getHibernateTemplate().update(students);
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.out.println("更新学生数据失败");

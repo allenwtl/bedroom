@@ -65,4 +65,11 @@ public interface StudentsServiceInterf {
 	 * function：将有床位的学生添加到roomtab中
 	 * parameter：class_id,sex*/
 	public List<Map<String, String>> addStuOfRoom(String classes, String sex);
+	
+	/**更新学生数据	*/
+	public void updateStudent(Students students);
+	
+	/**根据学号查询学生	*/
+	public Students getStudentByNumber(String studentsNumber);
+	
 }

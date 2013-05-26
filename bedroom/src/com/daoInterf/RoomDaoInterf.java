@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.pojo.Room;
+import com.pojo.RoomandstudentsId;
 import com.pojo.Roominfor;
 
 public interface RoomDaoInterf {
@@ -96,6 +97,10 @@ public interface RoomDaoInterf {
 	 * author:高华锋
 	 * function :得到 学生的信息然后添加到 表格中*/
 	public List<Map<String, String>> getRoom(String classes, String sex);
+
+	/**得到学生寝室信息	*/
+	public RoomandstudentsId  getRoomandstudents(Short id );
+
 }
 
 

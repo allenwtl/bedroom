@@ -24,4 +24,28 @@ public class NationDaoImp extends HibernateDaoSupport implements NationDaoInterf
 		else  return nationList;
 	}
 
+	public Nation getNationById(String dm) {
+		List<Nation>  list  = null;
+		String sql = "from Nation where nationNumber = ?";
+		try {
+			list = this.getHibernateTemplate().find(sql, dm);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		if(list.isEmpty())  return null;
+		else return  list.get(0);
+	}
+	
+	public Nation getNationByName(String  name){
+		List<Nation>  list  = null;
+		String sql = "from Nation where nationName = ?";
+		try {
+			list = this.getHibernateTemplate().find(sql, name);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		if(list.isEmpty())  return null;
+		else return  list.get(0);
+	}
+
 }

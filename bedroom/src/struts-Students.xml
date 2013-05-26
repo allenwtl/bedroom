@@ -32,6 +32,9 @@
 		<action name="queryKezhi" class="queryKezhiAction"></action>
 		<action name="addClass" class="addClassAction"></action>
 		
+		<action name="modifyStuInfo" class="modifyStuInfo"></action>
+		
+		<action name="updateStuInfo" class="updateStuInfo"></action>
 	</package>
 
 	

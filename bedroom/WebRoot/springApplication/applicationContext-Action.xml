@@ -57,6 +57,8 @@
 			<property name="addressInfoServiceImp" ref="addressInfoServiceImp"></property>
 			<property name="resumeServiceImp"  ref="resumeServiceImp"></property>
 			<property name="homenumberServiceImp" ref="homenumberServiceImp"></property>
+			<property name="nationServiceImp"  ref="nationServiceImp"></property>
+			<property name="phoneListServiceInterf"  ref="phonelistServiceImp"></property>
 		</bean>
 
 		
@@ -84,6 +86,8 @@
 			<property name="politicalServiceImp" ref="politicalServiceImp"></property>
 			<property name="resumeServiceImp" ref="resumeServiceImp"></property>
 			<property name="studentsServiceImp" ref="studentsServiceImp"></property>
+			<property name="kezhiServiceImp" ref="kezhiServiceImp"></property>
+			<property name="roomServiceImp"  ref="roomServiceImp"></property>
 		</bean>
 		
 		<bean id="collegeAction" class="com.action.student.CollegeAction">
@@ -111,6 +115,13 @@
 			<property name="kezhiServiceInterf" ref="kezhiServiceImp"></property>
 			<property name="majorServiceInterf" ref="majorServiceImp"></property>
 		</bean>
+		
+		<bean id="updateStuInfo" class="com.action.student.UpdateStuInfoAction">
+			<property name="studentsServiceInterf" ref="studentsServiceImp"></property>
+			<property name="classServiceInterf"  ref="classServiceImp"></property>
+		</bean>
+		
+		
 </beans>
 
 

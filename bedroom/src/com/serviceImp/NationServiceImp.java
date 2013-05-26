@@ -15,5 +15,14 @@ public class NationServiceImp  implements  NationServiceInterf {
 	public List<Nation> getAllNations() {
 		return nationDaoImp.getAllNations();
 	}
-
+	
+	public Nation getNationById(String dm){
+		return nationDaoImp.getNationById(dm);
+	}
+	
+	public Nation getNationByName(String name){
+		return  nationDaoImp.getNationByName(name);
+	}
+	
+	
 }

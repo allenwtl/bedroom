@@ -1,10 +1,10 @@
 package com.serviceInterf;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import com.pojo.Room;
+import com.pojo.RoomandstudentsId;
 import com.pojo.Roominfor;
 
 public interface RoomServiceInterf {
@@ -89,4 +89,8 @@ public interface RoomServiceInterf {
 	 * author:高华锋
 	 * function：将属于班级的room添加到表格*/
 	public List<Map<String, String>> getRoom(String classes, String sex);
+	
+	/**得到学生寝室信息	*/
+	public RoomandstudentsId  getRoomandstudents(Short id );
+	
 }

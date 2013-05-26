@@ -16,8 +16,12 @@ import com.pojo.Socialrelations;
 import com.pojo.Students;
 import com.serviceImp.AddressInfoServiceImp;
 import com.serviceImp.HomenumberServiceImp;
+import com.serviceImp.NationServiceImp;
 import com.serviceImp.ResumeServiceImp;
 import com.serviceImp.StudentsServiceImp;
+import com.serviceInterf.NationServiceInterf;
+import com.serviceInterf.PhoneListServiceInterf;
+import com.util.ChangeTime;
 import com.vo.HomenumberVo;
 import com.vo.ResumeVo;
 import com.vo.SocialRelationsVo;
@@ -27,6 +31,16 @@ import com.vo.StudentVo;
 public class AddStudentAction extends ActionSupport {
 	private  StudentsServiceImp studentsServiceImp;
 	private  AddressInfoServiceImp addressInfoServiceImp;
+	private  NationServiceImp nationServiceImp;
+	private  PhoneListServiceInterf  phoneListServiceInterf;
+	
+	public void setPhoneListServiceInterf(
+			PhoneListServiceInterf phoneListServiceInterf) {
+		this.phoneListServiceInterf = phoneListServiceInterf;
+	}
+	public void setNationServiceImp(NationServiceImp nationServiceImp) {
+		this.nationServiceImp = nationServiceImp;
+	}
 	public void setAddressInfoServiceImp(AddressInfoServiceImp addressInfoServiceImp) {
 		this.addressInfoServiceImp = addressInfoServiceImp;
 	}
@@ -67,20 +81,27 @@ public class AddStudentAction extends ActionSupport {
 			district =  addressInfoServiceImp.getDistrictNameById(studentsVo.getXian()).getDistrictName();
 		students.setStudentsAddress(province+city+district+studentsVo.getDetail());
 		
-		students.setStudentsBirthday(changeTime(studentsVo.getStudentsBirthday()));
-		students.setStudentsInroomtime(changeTime(studentsVo.getStudentsInRoomTime()));
-		students.setStudentsInschool(changeTime(studentsVo.getStudentsInSchool()));
+		students.setStudentsBirthday(ChangeTime.changeTime(studentsVo.getStudentsBirthday()));
+		students.setStudentsInroomtime(ChangeTime.changeTime(studentsVo.getStudentsInRoomTime()));
+		students.setStudentsInschool(ChangeTime.changeTime(studentsVo.getStudentsInSchool()));
 		
 		students.setStudentsEmail(studentsVo.getStudentsEmail());
 		students.setStudentsNative(studentsVo.getStudentsNative());
 		students.setStudentsNativeplace(studentsVo.getStudentsNativeplace());
 		students.setStudentsPhone(studentsVo.getStudentsPhone());
+		
+		phoneListServiceInterf.saveNewPhone(studentsVo.getStudentsPhone(),students);
+		
 		students.setStudentsPinyin(studentsVo.getStudentsPinyin());
-		students.setStudentsPolitics(Short.parseShort(studentsVo.getStudentsPolitics()));
+		students.setStudentsPolitics(studentsVo.getStudentsPolitics());
 		students.setStudentsPostcode(studentsVo.getStudentsPostcode());
 		students.setStudentsQq(studentsVo.getStudentsQq());
 		students.setStudentsType(Short.parseShort(studentsVo.getStudentsType()));
 		
+		students.setStudentsIdcard(studentsVo.getStudentsIdcard());
+		students.setStudentsNation(studentsVo.getStudentsNation());
+		
+		System.out.println(students.getStudentsNation());
 		//图片url
 		students.setStudentsImage(path);
 		
@@ -115,8 +136,8 @@ public class AddStudentAction extends ActionSupport {
 		
 		for(int i=0;i<beginTime.size();i++){
 			Resume  resumePo = new Resume();
-			resumePo.setResumeBegintime(changeTime(beginTime.get(i)+"-01"));
-			resumePo.setResumeEndtime(changeTime(endTime.get(i)+"-01"));
+			resumePo.setResumeBegintime(ChangeTime.changeTime(beginTime.get(i)+"-01"));
+			resumePo.setResumeEndtime(ChangeTime.changeTime(endTime.get(i)+"-01"));
 			resumePo.setResumeLean(learn.get(i));
 			resumePo.setResumePerson(person.get(i));
 			resumePo.setStudentsId(id);

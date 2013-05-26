@@ -6,7 +6,7 @@ public class StudentVo implements java.io.Serializable {
 	
 	private String studentsId;
 	private String studentsNumber;
-	private String roomId;
+	private String roomLocation;
 	private String classNumber;
 	private String studentsPinyin;
 	private String studentsInRoomTime;
@@ -67,11 +67,11 @@ public class StudentVo implements java.io.Serializable {
 	public void setStudentsNumber(String studentsNumber) {
 		this.studentsNumber = studentsNumber;
 	}
-	public String getRoomId() {
-		return roomId;
+	public String getRoomLocation() {
+		return roomLocation;
 	}
-	public void setRoomId(String roomId) {
-		this.roomId = roomId;
+	public void setRoomLocation(String roomLocation) {
+		this.roomLocation = roomLocation;
 	}
 	public String getClassNumber() {
 		return classNumber;

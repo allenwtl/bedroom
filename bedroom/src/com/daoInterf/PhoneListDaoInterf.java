@@ -1,5 +1,8 @@
 package com.daoInterf;
 
-public interface PhoneListDaoInterf {
+import com.pojo.Students;
 
+public interface PhoneListDaoInterf {
+	/**保存新号码	*/
+	void saveNewPhone(String studentsPhone,Students students);
 }

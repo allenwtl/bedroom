@@ -18,7 +18,7 @@
 	<script type="text/javascript" src="js/modifyInfo.js"></script>
 	<style type="text/css">
 		input{
-			width: 225px; height: 30px;font-size: 18px;line-height: 30px;
+			width: 280px; height: 40px;font-size: 15px; line-height: 40px;
 		}
 	</style>
 	
@@ -27,44 +27,47 @@
   <body>
   <p align="center" style="font-size: 30">修改个人信息</p>
   	<table width="60%"  border="1" ><tr><td id="first">个人详细信息</td><td id="second">个人简历</td><td id="third">家庭成员</td><td id="forth">社会关系</td></tr></table>
-    <form id="myForm">
+    <form id="myForm" style="padding-top: 0px">
     	<table  id="theTable" width="60%" border="1"  >
     		<tr >
-    			<td>姓名</td><td><input id="name" name="" type="text" /></td><td>学号</td><td><input id="number" name="" type="text" /></td>
+    			<td>姓名</td><td><input id="name" name="name" type="text" onclick="update(this)" /></td><td>学号</td><td><input id="number" name="number" type="text" onclick="update(this)" /></td>
     		</tr>
     		<tr >
-    			<td>姓名拼音</td><td><input id="namePinYin" name="" type="text"/></td><td>性别</td><td><input id="sex" name="" type="text"/></td>
+    			<td>姓名拼音</td><td><input id="namePinYin" name="pinyin" type="text" onclick="update(this)"/></td><td>性别</td><td><input id="sex" name="sex" type="text" onclick="update(this)"/></td>
    			</tr>
     		<tr >
-    			<td>民族</td><td><input id="nation" name=""  type="text"/></td><td>出生日期</td><td><input id="birthday" name="" type="text" /></td>
+    			<td>民族</td><td id="showNation"><input id="nation" name="nation"  type="text" onclick="update(this)"/></td><td>出生日期</td><td><input id="birthday" name="birthday" type="text" onclick="update(this)" /></td>
     		</tr>
     		<tr >
-    			<td>身份证号码</td><td><input id="card" name="" type="text"/></td><td>政治面貌</td><td><input id="political" name="" type="text"/></td>
+    			<td>身份证号码</td><td><input id="card" name="card" type="text" onclick="update(this)"/></td><td>政治面貌</td><td id="showPolitical"><input id="political" name="political" type="text" onclick="update(this)"/></td>
     		</tr>
     		<tr >
-    			<td>所属班级</td><td><input id="clazz" name="" type="text"/></td><td>生源地</td><td><input id="origin" name="" type="text" /></td>
+    			<td>所属班级</td><td><input id="clazz" name="clazz" type="text" onclick="update(this)"/></td><td>生源地</td><td><input id="origin" name="origin" type="text" onclick="update(this)" /></td>
     		</tr>
     		<tr >
-    		    <td>籍贯</td><td><input id="native" name="" type="text"/></td><td>家庭住址</td><td><input id="homeAddress" name="" type="text"/></td>
+    		    <td>籍贯</td><td><input id="native" name="jiguan" type="text" onclick="update(this)"/></td><td>家庭住址</td><td><input id="homeAddress" name="address" type="text" onclick="update(this)"/></td>
     		</tr>
     		<tr >
-    			<td>邮编</td><td><input id="code" name="" type="text"/></td><td>联系方式</td><td><input id="phone" name="" type="text"/></td>
-    		</tr>
-    		<tr align="center">
-    			<td>考生类型</td><td><input id="type" name="" type="text"/></td><td>培养层次</td><td><input id="level" name="" type="text"/></td>
+    			<td>邮编</td><td><input id="code" name="code" type="text" onclick="update(this)"/></td><td>联系方式</td><td><input id="phone" name="phone" type="text" onclick="update(this)"/></td>
     		</tr>
     		<tr >
-    			<td>入学时间</td><td><input id="inSchool" name="" type="text" /></td><td>寝室详细地址</td><td><input id="bedroom" name="" type="text"/></td>
+    			<td>考生类型</td><td><input id="type" name="type" type="text" onclick="update(this)"/></td><td>邮箱</td><td><input id="email" name="email" type="text" onclick="update(this)"/></td>
     		</tr>
     		<tr >
-    			<td>QQ号码</td><td><input id="qq" name="" type="text"/></td><td>入寝室时间</td><td><input id="inBedRoom" name="" type="text"/></td>
+    			<td>入学时间</td><td><input id="inSchool" name="inschool" type="text" onclick="update(this)" /></td><td>寝室详细地址</td><td><input id="bedroom" name="bedroom" type="text" onclick="update(this)"/></td>
     		</tr>
     		<tr >
-    			<td>邮箱</td><td><input id="email" name="" type="text"/></td><td>&nbsp;</td><td><input type="button" value="tijiao"/></td>
+    			<td>QQ号码</td><td><input id="qq" name="qq" type="text" onclick="update(this)"/></td><td>入寝室时间</td><td><input id="inBedRoom" name="inbedroom" type="text" /></td>
+    		</tr>
+    		<tr >
+    			<td colspan="4"><input type="submit" value="提交"/></td>
     		</tr>
     	</table>
     	
     </form>
+    
+    
+    
     <form id="myForm2" style="display: none">
     	
     </form>

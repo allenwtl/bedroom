@@ -6,6 +6,7 @@ import java.util.Map;
 
 import com.daoImp.RoomDaoImp;
 import com.pojo.Room;
+import com.pojo.RoomandstudentsId;
 import com.pojo.Roominfor;
 import com.serviceInterf.RoomServiceInterf;
 
@@ -151,6 +152,12 @@ public class RoomServiceImp implements RoomServiceInterf {
 			System.out.println("roomserviceImp 151行");
 			return null;
 		}
+	}
+
+
+	@Override
+	public RoomandstudentsId getRoomandstudents(Short id) {
+		return roomDaoImp.getRoomandstudents(id);
 	}
 
 	

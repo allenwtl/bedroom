@@ -15,6 +15,7 @@ import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 import com.daoInterf.RoomDaoInterf;
 import com.pojo.Qinshi;
 import com.pojo.Room;
+import com.pojo.RoomandstudentsId;
 import com.pojo.Roominfor;
 import com.util.BaseInfor;
 import com.util.Bed;
@@ -460,6 +461,18 @@ public class RoomDaoImp extends HibernateDaoSupport implements RoomDaoInterf {
 		query.setParameter(1,sex);
 		List<Map<String,String>> rooms = query.setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP).list();
 		return rooms;
+	}
+
+	public RoomandstudentsId getRoomandstudents(Short id) {
+		List<RoomandstudentsId> list = null;
+		String sql = "from RoomandstudentsId where roomId=?";
+		try {
+			list = this.getHibernateTemplate().find(sql , id);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		if(list.isEmpty()) return null;
+		else return list.get(0);
 	}
 	
 	
